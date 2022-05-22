@@ -17,6 +17,6 @@ public class GreetingController {
     @CrossOrigin(origins = "http://localhost:8082")
     public Greeting greeting(@RequestParam(required = false, value = "name", defaultValue = "World") String name) {
         System.out.println("===Greeting===");
-        return new Greeting(counter.incrementAndGet(), String.format("Hello, %s", name));
+        return new Greeting(counter.incrementAndGet(), String.format("Hello, %s!", name));
     }
 }
